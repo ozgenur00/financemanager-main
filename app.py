@@ -21,7 +21,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # Initialize your Flask app instance
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get('DATABASE_URL', 'postgresql://postgres.retrbnyvrrhqggjaujsu:Ozzymozzy1!@aws-0-us-west-1.pooler.supabase.com:6543/postgres'))
+app.config['SQLALCHEMY_DATABASE_URI'] = (os.environ.get('DATABASE_URL', 'postgresql:///financemanager'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = False 
 app.config['DEBUG'] = True
