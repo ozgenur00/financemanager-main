@@ -7,12 +7,12 @@ class Config:
 class DevelopmentConfig(Config):
     FLASK_ENV = 'development'
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql:///financemanager'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://dfumjnnp:Bd4UsUlodu6KrHnaZj99_NRU7jFWiSZU@kala.db.elephantsql.com/dfumjnnp'
 
 class ProductionConfig(Config):
     FLASK_ENV = 'production'
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = 'postgresql:///financemanager'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://dfumjnnp:Bd4UsUlodu6KrHnaZj99_NRU7jFWiSZU@kala.db.elephantsql.com/dfumjnnp'
 
 class TestingConfig(Config):
     TESTING = True
