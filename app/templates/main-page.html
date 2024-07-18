@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block content %}
+    <div class="text-center" style="margin-top: 50px;">
+        <h1>Wealth Watcher</h1>
+        <p>Welcome, {{ g.user.first_name }}</p>
+        <p>Manage your finances easily and efficiently.</p>
+        <div id="accountsChart" class="plotly-graph-div">
+          {{ accounts_plot_div|safe }}
+      </div>
+      <div id="financialsChart" class="plotly-graph-div">
+        {{ financials_plot_div|safe }}
+      </div>
+        <div>
+            <a href="{{ url_for('account.accounts') }}" class="btn btn-primary btn-lg btn-margin">Accounts</a>
+            <a href="{{ url_for('transaction.transactions') }}" class="btn btn-primary btn-lg btn-margin">Transactions</a>
+            <a href="{{ url_for('budget.budgets') }}" class="btn btn-primary btn-lg btn-margin">Budgets</a>
+            <a href="{{ url_for('goal.goals') }}" class="btn btn-primary btn-lg btn-margin">Goals</a>
+        </div>
+    </div>
+{% endblock %}

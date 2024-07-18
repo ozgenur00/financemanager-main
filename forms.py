@@ -51,11 +51,16 @@ class TransactionForm(FlaskForm):
     type_choices = [('expense', 'Expense'), ('income', 'Income')]
     
     type = SelectField('Type', choices=type_choices, validators=[DataRequired()])
-    category = SelectField('Category', choices=[], validators=[DataRequired()])
+    category = SelectField('Category', choices=[], validators=[Optional()])
     description = StringField('Description', validators=[Optional()])
     amount = DecimalField('Amount', validators=[DataRequired(), validate_balance])
     date = DateField('Date', validators=[DataRequired()])
     account_id = SelectField('Account', coerce=int, validators=[DataRequired()], choices=[])
+
+
+    def validate_category(self, field): 
+        if self.type.data == 'expense' and not field.data:
+            raise ValidationError('This field is required.')
 
 class GoalCreationForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])

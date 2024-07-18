@@ -63,7 +63,6 @@ The application uses a PostgreSQL database to store all user data, including acc
 5. **Goal Setting:**
 
 	- Set financial goals with target amounts.
-	- Track progress towards achieving these goals.
 	- Edit and delete goals as needed.
 6. **Data Visualization:**
 
@@ -77,6 +76,42 @@ The application uses a PostgreSQL database to store all user data, including acc
 - **Data:** User-generated financial data.
 - **Technology Stack:** Flask, SQLAlchemy, Plotly, HTML, CSS, JavaScript, Bootstrap.
 
+**Setup Guide**
+
+**Prerequisites:** 
+	
+Before you begin, ensure you have the following installed on your local machine.
+
+- Python  3.7 or higher
+- PostgreSQL
+- Git
+
+**Step-by-Step installation**
+
+	1. Clone the Repository:
+	 	 - git clone https://github.com/hatchways-community/capstone-project-one-fb9e98dd816e434aab55efb36e2e18ff.git
+		 - cd capstone-project-one-fb9e98dd816e434aab55efb36e2e18f
+
+	2. Create and Activate a Virtual Environment:
+		- python -m venv venv
+		- source venv/bin/activate #on Windows use 'venv/Scripts/activate'
+
+	3. Install Dependencies: 
+		- pip install -r requirements.txt
+
+	4. Set Up the PostgreSQL Database:
+		- CREATE DATABASE financemanager
+
+	5. Apply Migrations
+		- flask db upgrade
+
+	6. Run the Application
+		- flask run
+
+**Running Tests**
+
+	1. To run the tests:
+		- python -m unittest discover
 
 **Conclusion**
 
