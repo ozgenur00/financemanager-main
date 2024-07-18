@@ -89,8 +89,7 @@ Before you begin, ensure you have the following installed on your local machine.
 **Step-by-Step installation**
 
 	1. Clone the Repository:
-	 	 - git clone https://github.com/hatchways-community/capstone-project-one-fb9e98dd816e434aab55efb36e2e18ff.git
-		 - cd capstone-project-one-fb9e98dd816e434aab55efb36e2e18f
+	 	 - git clone https://github.com/ozgenur00/financemanager-main.git
 
 	2. Create and Activate a Virtual Environment:
 		- python -m venv venv
