@@ -89,23 +89,27 @@ Before you begin, ensure you have the following installed on your local machine.
 **Step-by-Step installation**
 
 	1. Clone the Repository:
-	 	 - git clone https://github.com/ozgenur00/financemanager-main.git
+ 	 - git clone https://github.com/financemanager-main
+	 - cd financemanager-main
 
 	2. Create and Activate a Virtual Environment:
-		- python -m venv venv
-		- source venv/bin/activate #on Windows use 'venv/Scripts/activate'
+	 - python3 -m venv venv
+	 - source venv/bin/activate #on Windows use 'venv/Scripts/activate'
 
 	3. Install Dependencies: 
-		- pip install -r requirements.txt
+	 - pip install -r requirements.txt
 
-	4. Set Up the PostgreSQL Database:
-		- CREATE DATABASE financemanager
+	4. Set Up the PostgreSQL Database: Open your PostgreSQL shell or use a database management tool to create the database:
+	 - CREATE DATABASE financemanager;
 
-	5. Apply Migrations
-		- flask db upgrade
+	5. Adjust Database URI in configuration(if necessary): Modify your configuration file to include the username and password for your PostgreSQL database. The 		SQLALCHEMY_DATABASE_URI should look like this
+	 - SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost/financemanager'
 
-	6. Run the Application
-		- flask run
+	6. Seed Your Database:
+	 - python seed.py
+
+	7. Run the Application:
+	 - flask run
 
 **Running Tests**
 
